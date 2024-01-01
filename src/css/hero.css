@@ -1,0 +1,42 @@
+
+.polistery-container {
+  max-width: 800px;
+  position: relative;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.wall-img {
+  height: 500px;
+  width: auto;
+}
+
+.acrylic-img,
+.polistery-img {
+  height: 500px;
+  width: auto;
+  position: absolute;
+  left: 53px;
+  top: 2px;
+  transition: transform 0.7s cubic-bezier(0.7, 0, 0.84, 0);
+  transition-delay: 0.1ms, 4ms;
+  transform: translateX(390%);
+}
+.polistery-container:hover > .polistery-img,
+.polistery-container:focus > .polistery-img {
+  transform: translateX(0);
+}
+
+.acrylic-img {
+  transform: translate(11%, 100%);
+  transition: transform 0.5s ease-in;
+}
+
+.polistery-container:hover > .acrylic-img,
+.polistery-container:focus > .acrylic-img {
+  transform: translate(11%, 0);
+  transition-delay: 1s;
+}
